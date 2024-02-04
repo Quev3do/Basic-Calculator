@@ -1,39 +1,41 @@
+function master(c){
+    let numb = parseFloat(document.getElementById("number1").value);
+    let numb1 = parseFloat(document.getElementById("number2").value);
+
+    switch(c){
+        case "add":
+            return numb + numb1;
+        case "subs":
+            return numb - numb1;
+        case "mult":
+            return numb * numb1;
+        case "div":
+            return numb / numb1;
+        default:
+            return null;
+    }
+}
+
 function sumar(){
-    let numb = parseInt(document.getElementById("number1").value);
-    let numb1 = parseInt(document.getElementById("number2").value);
-
     let result = document.getElementById("result");
-    let resulttxt = numb + numb1;
 
-    result.innerText = (resulttxt);
+    result.innerText = master("add");
 }
 
 function restar(){
-    let numb = parseInt(document.getElementById("number1").value);
-    let numb1 = parseInt(document.getElementById("number2").value);
-
     let result = document.getElementById("result");
-    let resulttxt = numb - numb1;
 
-    result.innerText = (resulttxt);
+    result.innerText = master("subs");
 }
 
 function multiplicar(){
-    let numb = parseInt(document.getElementById("number1").value);
-    let numb1 = parseInt(document.getElementById("number2").value);
-
     let result = document.getElementById("result");
-    let resulttxt = numb * numb1;
 
-    result.innerText = (resulttxt);
+    result.innerText = master("mult");
 }
 
 function dividir(){
-    let numb = parseInt(document.getElementById("number1").value);
-    let numb1 = parseInt(document.getElementById("number2").value);
-
     let result = document.getElementById("result");
-    let resulttxt = numb / numb1;
 
-    result.innerText = (resulttxt);
+    result.innerText = master("div");
 }
